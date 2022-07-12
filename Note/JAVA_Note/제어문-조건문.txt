@@ -1,0 +1,48 @@
+1. 조건문이란?
+(1) if문
+	if(조건식1) {
+		조건식1이 참일 때 실행할 명령문;
+	}else if(조건식2){
+		조건식1이 거짓이고 조건식2가 참일 때 실행할 명령문;
+	}else{
+		위의 조건식 둘 다 참이 아닐 때 실행할 명령문;
+}
+
+(2) swith문 :  if~else if의 친구. 가독성 면에서 좋다.
+switch(정수형 또는 문자형 변수 cf. 자바 1.7버전 이상은 문자열도 가능은 해){
+		case 변수값1 : 위의 변수가 변수값1일 때 처리할 명령문; break;
+		case 변수값2 : 위의 변수가 변수값1일 때 처리할 명령문; break;
+		∙ ∙ ∙ ∙ ∙ ∙
+		default : 위의 변수값들이 아닐 때 처리할 명령문; break;
+	}
+
+----------------------------------------------------------------
+if(num == 1) {
+System.out.println("주사위 1번");
+} else if(num == 2) {
+System.out.println("주사위 2번");
+} else if(num == 3) {
+System.out.println("주사위 3번”);
+} else if(num == 4){
+System.out.println("주사위 4번”);
+} else if(num == 5){
+System.out.println("주사위 5번”);
+}else {
+System.out.println("주사위 6번");
+}	
+
+----------------------------------------------------------------
+switch(num) {
+case 1:
+    System.out.println("주사위 1번");break;
+case 2:
+    System.out.println("주사위 2번");break;
+case 3:
+    System.out.println("주사위 3);break;
+case 4
+    System.out.println("주사위 4번");break;
+case 5:
+    System.out.println("주사위 5번”);break;
+default:
+    System.out.println("주사위 6번");break;
+}
