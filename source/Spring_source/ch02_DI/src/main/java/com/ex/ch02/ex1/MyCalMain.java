@@ -1,4 +1,4 @@
-package com.ex.ch02;
+package com.ex.ch02.ex1;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;

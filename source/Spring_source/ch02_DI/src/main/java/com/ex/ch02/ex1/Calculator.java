@@ -1,4 +1,4 @@
-package com.ex.ch02;
+package com.ex.ch02.ex1;
 
 public class Calculator {
 	public void addition(int n1, int n2) {

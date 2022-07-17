@@ -1,4 +1,4 @@
-package com.ex.ch02;
+package com.ex.ch02.ex1;
 
 public class Mycalculator {
 	private Calculator calculator;
