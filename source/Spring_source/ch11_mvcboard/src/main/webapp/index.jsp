@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:forward page="mvcbooard/list.do"/>
+	<jsp:forward page="mvcboard/list.do"/>
 </body>
 </html>

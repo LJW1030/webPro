@@ -18,6 +18,6 @@ public class BoardController {
 		model.addAttribute("pageNum", pageNum);
 		service = new BListService();
 		service.execute(model);
-		return "mvcmodel/list";
+		return "mvcboard/list";
 	}
 }
