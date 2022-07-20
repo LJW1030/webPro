@@ -20,7 +20,7 @@ public class FileService {
 		boolean isUpload = false;
 		// 파일 업로드된 파일명 받아, 서버에 업로드, 프로젝트 폴더에 복사
 		String uploadPath = mRequest.getRealPath("upload/");
-		String backupPath = "D:/webPro/source/09_Spring/ch13_fileupload/src/main/webapp/upload/";
+		String backupPath = "F:/webPro/source/Spring_source/ch13_fileupload/src/main/webapp/upload/";
 		String[] filenames = new String[3];
 		int i = 0;
 		Iterator<String> params = mRequest.getFileNames(); // file1, file2, file3
