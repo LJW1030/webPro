@@ -72,6 +72,43 @@
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
+    <title>Spring Batch 5.0.0-M4 available now!</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/07/20/spring-batch-5-0-0-m4-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mahmoud Ben Hassine</name>
+    </author>
+    <id>tag:spring.io,2022-07-21:4863</id>
+    <updated>2022-07-20T19:59:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Batch 5.0.0-M4 is now available from our &lt;a href="https://repo.spring.io/milestone"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This fourth milestone introduces several improvements for Java Records support. It also comes with a number of enhancements, bug fixes, dependency upgrades, and documentation updates. For more details about all the changes, see the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/5.0.0-M4"&gt;release notes&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#java-records-support-improvement" class="anchor" name="java-records-support-improvement"&gt;&lt;/a&gt;Java Records Support Improvement&lt;/h3&gt;
+&lt;p&gt;The support for Java records as items in a chunk-oriented step was initially introduced in v4.3, but that support was limited, due to the fact that v4 has Java 8 as a baseline. In Java 8, records were not even in preview yet. That initial support was based on reflection tricks to create Java records and populate them with data, without having access to the &lt;code&gt;java.lang.Record&lt;/code&gt; API, which was finalized in Java 16.&lt;/p&gt;
+&lt;p&gt;Now that v5 has Java 17 as a baseline, we have improved records support in Spring Batch by leveraging the &lt;code&gt;java.lang.Record&lt;/code&gt; API in different parts of the framework. For example, the &lt;code&gt;FlatFileItemReaderBuilder&lt;/code&gt; is now able to detect if the item type is a record or a regular class and configure the corresponding &lt;code&gt;FieldSetMapper&lt;/code&gt; implementation accordingly (&lt;code&gt;RecordFieldSetMapper&lt;/code&gt; for records and &lt;code&gt;BeanWrapperFieldSetMapper&lt;/code&gt; for regular classes). The goal here is to make the configuration of the required &lt;code&gt;FieldSetMapper&lt;/code&gt; type &lt;em&gt;transparent&lt;/em&gt; to the user. The same feature has also been implemented in the &lt;code&gt;FlatFileItemWriterBuilder&lt;/code&gt;, in order to configure either a &lt;code&gt;RecordFieldExtractor&lt;/code&gt; or a &lt;code&gt;BeanWrapperFieldExtractor&lt;/code&gt; based on the item type.&lt;/p&gt;&lt;h3&gt;&lt;a href="#bug-fixes" class="anchor" name="bug-fixes"&gt;&lt;/a&gt;Bug fixes&lt;/h3&gt;
+&lt;p&gt;Some bugs cannot be fixed without introducing breaking changes. We take the opportunity of this major release to fix such bugs. In this milestone, the following major bugs were fixed:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unable to read XML data without &lt;code&gt;spring-tx&lt;/code&gt; in the classpath &lt;a href="https://github.com/spring-projects/spring-batch/issues/4132"&gt;#4132&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Lost transaction attributes when using a chaining &lt;code&gt;StepBuilder&lt;/code&gt; &lt;a href="https://github.com/spring-projects/spring-batch/issues/3686"&gt;#3686&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ItemReadListener&lt;/code&gt; not being correctly registered after adding a &lt;code&gt;StepExecutionListener&lt;/code&gt; &lt;a href="https://github.com/spring-projects/spring-batch/issues/773"&gt;#773&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cannot subclass &lt;code&gt;final class com.sun.proxy.$Proxy202&lt;/code&gt; &lt;a href="https://github.com/spring-projects/spring-batch/issues/793"&gt;#793&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;StepBuilderFactory&lt;/code&gt; only Supports Listener Annotations, not Listener Interfaces &lt;a href="https://github.com/spring-projects/spring-batch/issues/1098"&gt;#1098&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is not an exhaustive list. See the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/5.0.0-M4"&gt;release notes&lt;/a&gt; for the complete list of bugs that were fixed in this milestone.&lt;/p&gt;&lt;h3&gt;&lt;a href="#dependency-upgrades" class="anchor" name="dependency-upgrades"&gt;&lt;/a&gt;Dependency Upgrades&lt;/h3&gt;
+&lt;p&gt;Major dependencies have been upgraded to the following versions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Upgrade to Spring Framework 6.0.0-M5&lt;/li&gt;
+  &lt;li&gt;Upgrade to Spring Data 2022.0.0-M5&lt;/li&gt;
+  &lt;li&gt;Upgrade to Spring Integration 6.0.0-M4&lt;/li&gt;
+  &lt;li&gt;Upgrade to Spring AMQP 3.0.0-M3&lt;/li&gt;
+  &lt;li&gt;Upgrade to Spring for Apache Kafka 3.0.0-M5&lt;/li&gt;
+  &lt;li&gt;Upgrade to Micrometer 1.10.0-M3&lt;/li&gt;
+  &lt;li&gt;Upgrade to Hibernate 6.1.1.Final&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#feedback" class="anchor" name="feedback"&gt;&lt;/a&gt;Feedback&lt;/h3&gt;
+&lt;p&gt;I would like to thank all contributors who had a role in this release! As we continue our work on Spring Batch 5, we look forward to your feedback on &lt;a href="https://github.com/spring-projects/spring-batch/issues"&gt;Github&lt;/a&gt;, &lt;a href="https://twitter.com/springbatch"&gt;Twitter&lt;/a&gt;, and &lt;a href="https://stackoverflow.com/questions/tagged/spring-batch"&gt;StackOverflow&lt;/a&gt;.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt;|&lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on Github&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-batch/docs/5.0.0-M4/reference/html/index-single.html"&gt;Reference documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
     <title>Spring for GraphQL 1.0.1 released</title>
     <link rel="alternate" href="https://spring.io/blog/2022/07/20/spring-for-graphql-1-0-1-released" />
     <category term="releases" label="Releases" />
@@ -608,20 +645,6 @@ dependencyManagement {&#xD;
   }&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Today is the last day to submit to the SpringOne 2022 Call For Papers!</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/06/28/today-is-the-last-day-to-submit-to-the-springone-2022-call-for-papers" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-06-28:4843</id>
-    <updated>2022-06-28T07:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! This year, &lt;strong&gt;SpringOne&lt;/strong&gt; is &lt;em&gt;back&lt;/em&gt; in person, and being held in my hometown of San Francisco, California, December 6th-8th. (&lt;a href="https://springone.io/"&gt;Have you registered?&lt;/a&gt;) and today (June 28th, 2022) is the &lt;em&gt;last day&lt;/em&gt; to submit to the Call For Papers! If you have a good idea or story you want to share, &lt;a href="https://springone.io/2022/cfp"&gt;&lt;strong&gt;submit today&lt;/strong&gt;&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Either way, I hope to see you in December in San Francisco, a city so famous for its foggy nightscapes that I think it&amp;rsquo;s fair to say we are &lt;em&gt;the original cloud natives&lt;/em&gt;! &lt;/p&gt;
-&lt;img src="https://pbs.twimg.com/media/FWVzsCMXoAEvEL5?format=jpg&amp;name=large" /&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
