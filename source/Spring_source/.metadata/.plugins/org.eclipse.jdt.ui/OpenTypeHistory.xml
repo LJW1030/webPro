@@ -2,4 +2,7 @@
 <typeInfoHistroy>
 <typeInfo handle="=ch14_mybatis1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ex.ch14.dao{DeptDao.java[DeptDao" modifiers="513" timestamp="1658330227209"/>
 <typeInfo handle="=ch14_mybatis1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ex.ch14.Service{EmpService.java[EmpService" modifiers="513" timestamp="1658415887271"/>
+<typeInfo handle="=ch15_mybatis2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ex.ch15.dao{DeptDao.java[DeptDao" modifiers="513" timestamp="1658552820017"/>
+<typeInfo handle="=ch15_mybatis2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ex.ch15.dao{EmpDao.java[EmpDao" modifiers="513" timestamp="1658553030583"/>
+<typeInfo handle="=ch15_mybatis2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ex.ch15.service{EmpService.java[EmpService" modifiers="513" timestamp="1658553632604"/>
 </typeInfoHistroy>

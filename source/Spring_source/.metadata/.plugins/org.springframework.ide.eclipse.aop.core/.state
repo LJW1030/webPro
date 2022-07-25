@@ -4,5 +4,6 @@
 <aop-project name="ch02_DI"/>
 <aop-project name="ch13_fileupload"/>
 <aop-project name="ch01"/>
+<aop-project name="ch15_mybatis2"/>
 <aop-project name="ch11_mvcboard"/>
 </aop-reference-model>
