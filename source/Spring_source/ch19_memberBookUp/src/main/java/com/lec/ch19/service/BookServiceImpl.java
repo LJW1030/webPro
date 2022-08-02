@@ -21,7 +21,7 @@ import com.lec.ch19.util.Paging;
 public class BookServiceImpl implements BookService {
 	@Autowired
 	private BookDao bookDao;
-	String backupPath = "D:\\webPro\\source\\08_spring\\ch19_memberBookUp\\src\\main\\webapp\\bookImgFileUpload/";
+	String backupPath = "F:\\webPro\\source\\Spring_source\\ch19_memberBookUp\\src\\main\\webapp\\bookImgFileUpload/";
 	@Override
 	public List<Book> mainList() {
 		return bookDao.mainList();
