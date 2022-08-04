@@ -1,19 +1,17 @@
 package com.lec.loop;
+
 import java.util.Scanner;
-// 짝수를 입력받는 프로그램 구현
+
+//짝수를 입력받는 프로그램을 구현
 public class Ex08_do_while {
 	public static void main(String[] args) {
 		int num;
-		Scanner scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		do {
-			System.out.print("짝수를 입력하세요 : ");
-			num = scanner.nextInt();
+			System.out.println("짝수를 입력하세요 : ");
+			num = sc.nextInt();
 		}while(num%2 != 0);
-		System.out.print("입력하신 수는 짝수 "+num+"입니다");
-		scanner.close();
+		System.out.println("입력하신 수는 짝수");
+		sc.close();
 	}
 }
-
-
-
-

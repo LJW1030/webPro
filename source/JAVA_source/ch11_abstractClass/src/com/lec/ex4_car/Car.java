@@ -1,10 +1,11 @@
 package com.lec.ex4_car;
-// color, tire, displacement, handle, getSpec()
+// color, tire, displacement, handle, getSpec(추상메소드)
 public abstract class Car {
+
 	private String color;
-	private String tire;      // 타이어
-	private int displacement; // 배기량
-	private String handle; // 핸들
+	private String tire;
+	private int displacement;
+	private String handle;
 	public Car(String color, String tire, int displacement, String handle) {
 		this.color = color;
 		this.tire = tire;
@@ -12,7 +13,7 @@ public abstract class Car {
 		this.handle = handle;
 	}
 	public abstract void getSpec();
-	// setter & getter
+	
 	public String getColor() {
 		return color;
 	}
@@ -38,17 +39,3 @@ public abstract class Car {
 		this.handle = handle;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

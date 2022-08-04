@@ -1,4 +1,5 @@
 package com.lec.ex;
+
 public class VarEx05 {
 	public static void main(String[] args) {
 		float f1;
@@ -10,17 +11,10 @@ public class VarEx05 {
 		System.out.println("d="+d);
 		f1 = 10.1f;
 		d = 10.1;
-		if (f1==d)
+		if (f1==d) 
 			System.out.println("두 변수는 같다");
 		else
-			System.out.println("두변수는 다르다");
+			System.out.println("두 변수는 다르다");
+		
 	}
 }
-
-
-
-
-
-
-
-

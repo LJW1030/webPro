@@ -1,0 +1,48 @@
+package com.lec.ex2_datastream;
+
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+
+// 파일에 저장된 재고들을 출력
+public class ProductPrint {
+
+	public static void main(String[] args) {
+		InputStream fis = null;
+		DataInputStream dis = null;
+		ArrayList<Product> product = new ArrayList<Product>();
+		try {
+			fis = new FileInputStream("src/com/lec/ex2_datastream/product.dat");
+			dis = new DataInputStream(fis);
+			while(true) {
+				String name = dis.readUTF(); // 상품명
+				int price = dis.readInt(); // 가격
+				int ps = dis.readInt(); // 재고수량
+				product.add(new Product(name, price, ps));
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (IOException e) {
+			System.out.println("재고 데이터는 다음과 같습니다.");
+		} finally {
+			try {
+				if(dis != null) 
+					dis.close();
+				if(fis != null)
+					fis.close();
+			} catch (Exception e2) {}
+			//ArrayList product 출력
+		}if(product.isEmpty()) {
+			System.out.println("입력된 재고량이 없습니다");
+		}else {
+			for(Product p : product) {
+				System.out.println(p);
+			}
+			System.out.println("이상 물품 "+product.size()+" 가지 입력됨");
+		}
+		
+	}
+}

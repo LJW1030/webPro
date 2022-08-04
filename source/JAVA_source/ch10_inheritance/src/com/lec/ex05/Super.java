@@ -1,4 +1,5 @@
 package com.lec.ex05;
+
 public class Super {
 	int s;
 	public Super() {

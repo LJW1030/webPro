@@ -1,5 +1,6 @@
 package strategy2.interfaces;
-// 10km/l, 15km/l, 20mk/l¿¡ ÀÌ¿ë
+// Km10, Km15, Km20
 public interface IKm {
+
 	public void km();
 }

@@ -1,17 +1,26 @@
 package com.lec.ex1_inputstreamOutputstream;
-import java.io.*;
-// (1)스트림객체(입력용, 출력용) (2)읽고 쓴다 (3)파일닫는다(스트림객체.close)
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+// 1. 스트링객체(입력용, 출력용) 2. 읽고 쓴다 3. 파일 닫는다.(스트링객체.close)
 public class Ex05_filecopyStep1 {
+
 	public static void main(String[] args) {
-		InputStream  is = null;
+		InputStream is = null;
 		OutputStream os = null;
 		try {
-			is = new FileInputStream("d:\\webPro\\bts.jpg"); // (1)
-			os = new FileOutputStream("d:/webPro/bts_copyed.jpg");
+			is = new FileInputStream("d:\\webPro\\google.jpg"); // 1.
+			os = new FileOutputStream("d:/webPro/google_copyed.jpg");
 			int cnt = 0;
-			while(true) { // (2)
-				int i = is.read(); // 1byte읽기
-				if(i == -1) break; // 파일의 끝인지 여부
+			while (true) { // 2.
+				int i = is.read(); // 1byte 읽기
+				if (i == -1)
+					break; // 파일의 끝인지 여부
 				os.write(i);
 				cnt++;
 			}
@@ -22,22 +31,12 @@ public class Ex05_filecopyStep1 {
 			System.out.println(e.getMessage());
 		} finally {
 			try {
-				if(os!=null) os.close();
-				if(is!=null) is.close();
+				if (os != null)
+					os.close();
+				if (is != null)
+					is.close();
 			} catch (IOException e) {
-				// TODO: handle exception
 			}
-		}//try-catch-finally
-	}//main
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-

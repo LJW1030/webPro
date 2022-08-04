@@ -1,8 +1,10 @@
 package com.lec.ex1_list;
+
 public class BClass {
+
 	private String strB = "BÇü";
 	@Override
 	public String toString() {
-		return "°´Ã¼¾ÈÀÇ strB="+strB;
+		return "°´Ã¼¾ÈÀÇ strB ="+strB;
 	}
 }

@@ -1,7 +1,7 @@
 package com.lec.ex5_atm;
 // ATM card = new ATM(20000)
 // ATM_Target target = new ATM_Target(card)
-public class ATM_Target implements Runnable{
+public class ATM_Target implements Runnable {
 	private boolean flag;
 	private ATM card;
 	public ATM_Target(ATM card) {
@@ -9,14 +9,16 @@ public class ATM_Target implements Runnable{
 	}
 	@Override
 	public void run() {
-		for(int i=0 ; i<10 ; i++) {
-			if(flag) { // 출금
-				card.withdraw(1000, Thread.currentThread().getName());
+		// 저금했다 출금했다
+		for(int i=0; i<10; i++) {
+			if(flag) { //출금
+				card.withdraw(10000, Thread.currentThread().getName());
 				flag = false;
-			}else {// 적금
-				card.deposit(1000, Thread.currentThread().getName());
+			}else { //저금
+				card.deposit(10000, Thread.currentThread().getName());
 				flag = true;
-			}// if
-		}//for
-	}//run
-}//class
+			}
+		}
+	}
+
+}

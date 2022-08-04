@@ -1,30 +1,30 @@
 package com.lec.ex4_threadNObjectN;
-// ThreadEx threadA = new ThreadEx("A")
-public class ThreadEx extends Thread{
+
+// ThreadEx threadA = new ThreadEx("A");
+public class ThreadEx extends Thread {
+
 	private int num = 0;
+
+	public ThreadEx() {
+	}
 	public ThreadEx(String name) {
 		super(name);
 	}
+
 	@Override
 	public void run() {
-		for(int i = 0 ; i <10 ; i++) {
-			if(Thread.currentThread().getName().equals("A")) {
-				System.out.println("~ ~ A 쓰레드 수행 중 ~ ~");
-				num++;
+		for (int i = 0; i < 10; i++) {
+				if (Thread.currentThread().getName().equals("A")) { // "A" 스레드일 경우
+					System.out.println("----A 스레드 수행중----");
+					num++;
+				}
+				System.out.println(Thread.currentThread().getName() + "의 num=" + num);
 			}
-			System.out.println(Thread.currentThread().getName()+"의 num = "+num);
 			try {
 				Thread.sleep(500);
-			} catch (InterruptedException e) { }
-		}//for
-	}
+			} catch (InterruptedException e) {}
+		} // for
 	public int getNum() {
 		return num;
 	}
 }
-
-
-
-
-
-

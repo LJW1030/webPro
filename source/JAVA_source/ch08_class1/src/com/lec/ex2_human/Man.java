@@ -1,16 +1,17 @@
 package com.lec.ex2_human;
-// Man kim = new Man(22, 160, 50.5, "010-999-9999");
-//Man kim = new Man(22, 160, 50.5);
-//Man kim = new Man(22);
+// Man Kim - new Man(22, 160, 50,5, "010-0000-0000");
+//Man Kim - new Man(22, 160, 50,5);
 public class Man {
-	private int age;   
+	private int age;
 	private int height;
 	private double weight;
 	private String phoneNum;
-	public Man() {} // 디폴트 생성자 함수
+	
+	public Man() {} // 디폴트 생성자 함수, 생성자 함수는 리턴타입 없다
 	public Man(int age) {
-		this.age = age;
-	}
+			this.age =age;
+		}
+	
 //	public Man(int height) {
 //		this.height = height;
 //	}
@@ -26,13 +27,11 @@ public class Man {
 		this.weight = weight;
 		this.phoneNum = phoneNum;
 		System.out.println("파라미터가 4개짜리 생성자 함수 호출");
-	}
-	// 메소드
+	}//setter & getter(age, height, weight, phoneNum)
 	public double calculateBMI() {
 		double result = weight / ((height/100.0)*(height/100.0));
 		return result;
 	}
-	// setter & getter (age, height, weight, phoneNum)  m.getAge()  / m.setAge(22)
 	public void setAge(int age) {
 		this.age = age;
 	}
@@ -58,22 +57,3 @@ public class Man {
 		return phoneNum;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

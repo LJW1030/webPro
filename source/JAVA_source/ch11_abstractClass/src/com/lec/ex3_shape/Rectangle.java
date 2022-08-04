@@ -1,14 +1,18 @@
 package com.lec.ex3_shape;
+
 public class Rectangle extends Shape {
 	private int w; // 가로
 	private int h; // 세로
+	
 	public Rectangle() {}
 	public Rectangle(int w, int h) {
+		super();
 		this.w = w;
 		this.h = h;
 	}
 	@Override
-	public double computeArea() {
+	public double computerArea() {
 		return w*h;
 	}
+
 }

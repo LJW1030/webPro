@@ -1,48 +1,38 @@
 package com.lec.ex3_set;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+
 public class Ex04_Iterator {
+
 	public static void main(String[] args) {
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("STR1"); list.add("STR2");
-		System.out.println(list);
-		Iterator<String> iterator1 = list.iterator();
-		while(iterator1.hasNext()) {
-			System.out.println(iterator1.next());
+		ArrayList<String> arr = new ArrayList<String>();
+		arr.add("STR"); arr.add("STR");
+		System.out.println(arr);
+		Iterator<String> iter = arr.iterator();
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
 		}
-		for(String l : list) {
+		for(String l : arr) {
 			System.out.println(l);
 		}
-		//      ¸Ê
+		//		¸Ê
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("È«±æµ¿", "010-9999-9999");
-		map.put("±è±æµ¿", "010-9999-9999");
-		Iterator<String> iterator2 = map.keySet().iterator();
-		while(iterator2.hasNext()) {
-			String key = iterator2.next();
-			System.out.println(key + "Å°ÀÇ µ¥ÀÌÅÍ : " + map.get(key) );
+		map.put("È«", "010-9999-9999");
+		map.put("¹Ú", "010-1111-1111");
+		Iterator<String> iter1 = map.keySet().iterator();
+		while(iter1.hasNext()) {
+			String key = iter1.next();
+			System.out.println(key+"Å°ÀÇ µ¥ÀÌÅÍ : "+map.get(key));
 		}
-		// ¼Â
+		// 		¼Â
 		HashSet<String> set = new HashSet<String>();
 		set.add("str0"); set.add("str1"); set.add("str1");
-		Iterator<String> iterator3 = set.iterator();
-		while(iterator3.hasNext()) {
-			System.out.println(iterator3.next());
-		}// while
-	}//main
+		Iterator<String> iter2 = set.iterator();
+		while(iter2.hasNext()) {
+			System.out.println(iter2.next());
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

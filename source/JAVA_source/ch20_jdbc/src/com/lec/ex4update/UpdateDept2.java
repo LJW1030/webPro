@@ -6,7 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
+
+
 public class UpdateDept2 {
+
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url    = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
@@ -51,15 +54,4 @@ public class UpdateDept2 {
 		}
 	}// main
 }
-
-
-
-
-
-
-
-
-
-
-
-
+	

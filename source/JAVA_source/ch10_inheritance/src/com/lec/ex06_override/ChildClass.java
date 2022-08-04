@@ -1,6 +1,8 @@
+
 package com.lec.ex06_override;
-// ParentClass의 method1(), method2()상속받음
+// ParentClass의 method1(), method2() 상속받음
 public class ChildClass extends ParentClass {
+
 	public ChildClass() {
 		System.out.println("매개변수 없는 ChildClass 생성자");
 	}

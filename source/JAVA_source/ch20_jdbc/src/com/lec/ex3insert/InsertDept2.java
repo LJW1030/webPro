@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
+
 public class InsertDept2 {
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
@@ -50,24 +51,7 @@ public class InsertDept2 {
 				if(rs  !=null) rs.close();
 				if(stmt!=null) stmt.close();
 				if(conn!=null) conn.close();
-			} catch (SQLException e) {
-				
-			}
+			} catch (SQLException e) {}
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,11 +1,14 @@
 package com.lec.ex0conn;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 public class ConnOracle {
+	
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String url    = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 		Connection conn = null;
 		try {
 			// 1. 드라이버 로드
@@ -17,25 +20,15 @@ public class ConnOracle {
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 오류 : "+e.getMessage());
 		} catch (SQLException e) {
-			System.out.println("DB 연결 오류 : " + e.getMessage());
+			System.out.println("DB 연결오류 : "+e.getMessage());
 		} finally {
 			// 연결 객체 해제
 			try {
-				if(conn!=null) conn.close();
+				if(conn!=null)
+					conn.close();
 			} catch (SQLException e) {
 				System.out.println(e.getMessage());
 			}
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-

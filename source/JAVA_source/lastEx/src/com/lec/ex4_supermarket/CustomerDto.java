@@ -1,13 +1,13 @@
 package com.lec.ex4_supermarket;
-//CID, CTEL, CNAME, CPOINT, CAMOUNT, LEVELNAME, forLevelUp
+
 public class CustomerDto {
-	private int    cid;
+	private int cid;
 	private String ctel;
 	private String cname;
-	private int    cpoint;
-	private int    camount;
+	private int cpoint;
+	private int camount;
 	private String levelName;
-	private int    forLevelUp;
+	private int forLevelUp;
 	public CustomerDto(int cid, String ctel, String cname, int cpoint, int camount, String levelName, int forLevelUp) {
 		this.cid = cid;
 		this.ctel = ctel;
@@ -19,8 +19,7 @@ public class CustomerDto {
 	}
 	@Override
 	public String toString() {
-		return cid +"\t" + ctel + "\t\t" + cname + "\t" +cpoint +"\t" + camount +
-					"\t" + levelName + "\t" +forLevelUp;
+		return cid +"\t"+ ctel +"\t\t"+ cname +"\t"+ cpoint +"\t"+ camount +"\t"+ levelName +"\t"+ forLevelUp;
 	}
 	public int getCid() {
 		return cid;
@@ -42,16 +41,6 @@ public class CustomerDto {
 	}
 	public int getForLevelUp() {
 		return forLevelUp;
-	}	
+	}
+	
 }
-
-
-
-
-
-
-
-
-
-
-

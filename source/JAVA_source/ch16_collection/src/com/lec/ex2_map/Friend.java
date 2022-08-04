@@ -1,12 +1,16 @@
 package com.lec.ex2_map;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
-// Friend f = new Friend("全","010-9999-9999");
+// Friend f = new Friend("全","010-9999-9999")
+// sysout(F) -> 全狼 楷遏贸 010-9999-9999, 积老: 04岿 04老
 public class Friend {
+
 	private String name;
 	private String tel;
-	private Date   birth;
+	private Date birth;
 	public Friend(String name, String tel) {
+		super();
 		this.name = name;
 		this.tel = tel;
 	}
@@ -16,23 +20,13 @@ public class Friend {
 		this.tel = tel;
 		this.birth = birth;
 	}
-	// sysout(f) => 全狼 楷遏贸 010-9999-9999, 积老:04岿14老
 	@Override
 	public String toString() {
-		SimpleDateFormat sdf = new SimpleDateFormat("积老 : MM岿 dd老");
+		SimpleDateFormat sdf = new SimpleDateFormat("MM岿 dd老");
 		if(birth !=null) {
-			return name + "狼 楷遏贸 : " + tel + ", " + sdf.format(birth);
+			return name+"狼 楷遏贸 "+tel+", 积老"+sdf.format(birth);
 		}else {
-			return name + "狼 楷遏贸 : " + tel;
+			return name+"狼 楷遏贸 "+tel;
 		}//if
 	}//toString
-} // class
-
-
-
-
-
-
-
-
-
+}//class

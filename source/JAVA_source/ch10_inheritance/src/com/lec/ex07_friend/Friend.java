@@ -3,9 +3,9 @@ package com.lec.ex07_friend;
 // this() : 현 클래스의 생성자 함수
 public class Friend {
 	private String name;
-	private String tel; // "010-9999-9999" Friend f = new Friend("홍길동","010-9999-9999");
+	private String tel; 
 	public Friend() {
-		System.out.println("매개벼수 없는 생성자 함수");
+		System.out.println("매개변수 없는 생성자 함수");
 	}
 	public Friend(String name) {
 		this();
@@ -18,16 +18,7 @@ public class Friend {
 		System.out.println("매개변수 두개짜리 생성자 함수");
 	}
 	public String infoString() {
-		return "[이름]"+name + " [전화]" + tel;
+		return "[이름] "+name+ " [전화]" +tel;
 	}
+	
 }
-
-
-
-
-
-
-
-
-
-

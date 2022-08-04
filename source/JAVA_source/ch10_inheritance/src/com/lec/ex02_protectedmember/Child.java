@@ -1,30 +1,20 @@
 package com.lec.ex02_protectedmember;
+
 public class Child extends SuperIJ{
 	private int total;
-//	public Child() {
-//		System.out.println("매개변수 없는 Child생성자");
-//	}
+
+	public Child() {
+		System.out.println("매개변수 없는 Child 생성자");
+	}
 	// Child c = new Child(10,20);
 	public Child(int i, int j) {
-		setI(i); //this.i=i;
+		setI(i);//this.i = i; (사용하고싶을시 부모클래스의 데이터 private->protected)
 		setJ(j);
 		System.out.println("매개변수 있는 Child 생성자");
 	}
 	public void sum() {
-		total = getI() + getJ(); // total = i+j;
-		System.out.printf("본 객체의 i=%d, j=%d.", getI(), getJ());
-		System.out.printf("본 객체의 total=%d", total);
+		total = getI() +getJ();
+		System.out.printf("본 객체의 i=%d, j=%d", getI(),getJ());
+		System.out.printf("\n본 객체의 total=%d", total);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-

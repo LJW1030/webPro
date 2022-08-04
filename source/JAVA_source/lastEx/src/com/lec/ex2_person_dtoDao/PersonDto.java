@@ -1,22 +1,24 @@
 package com.lec.ex2_person_dtoDao;
+
 public class PersonDto {
-	private int    rank;
+
+	private int rank;
 	private String pname;
 	private String jname;
-	private int    kor;
-	private int    eng;
-	private int    mat;
-	private int    sum;
+	private int kor;
+	private int eng;
+	private int mat;
+	private int sum;
 	public PersonDto() {}
-	// 입력용 : pname, jname, kor, eng, mat
+	//입력용 : pname, jname, kor, eng, mat
 	public PersonDto(String pname, String jname, int kor, int eng, int mat) {
 		this.pname = pname;
 		this.jname = jname;
 		this.kor = kor;
 		this.eng = eng;
-		this.mat = mat;
+		this.mat = mat;		
 	}
-	// 출력용 : rank, pname, jname, kor, eng, mat, sum
+	//출력용 : rank, pname, jname, kor, eng, mat, sum
 	public PersonDto(int rank, String pname, String jname, int kor, int eng, int mat, int sum) {
 		this.rank = rank;
 		this.pname = pname;
@@ -28,11 +30,10 @@ public class PersonDto {
 	}
 	@Override
 	public String toString() {
-		return rank + "등\t" + pname + "\t" + jname + "\t" 
-				+ kor + "\t" + eng
-				+ "\t" + mat + "\t" + sum;
+		return rank + "등\t"+ pname + (pname.length()<7? "\t\t" : "\t") + jname + "\t" + kor+ "\t" + eng+ "\t"
+				+  mat + "\t" + sum ;
 	}
-	// setter & getter
+	//getter & setter
 	public int getRank() {
 		return rank;
 	}
@@ -75,16 +76,5 @@ public class PersonDto {
 	public void setSum(int sum) {
 		this.sum = sum;
 	}
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -10,7 +10,7 @@ public class RobotOrder {
 		}else if(robot instanceof DrawRobot) {
 			((DrawRobot) robot).draw();
 		}else {
-			System.out.println("확장된 로봇이면 이곳에 구현하세요");
+			System.out.println("확장된 로봇이면 이곳에 추가하세요.");
 		}
-	}
+	} 
 }

@@ -1,53 +1,86 @@
 package com.lec.ex3_student;
+
 public class StudentDto {
-	private int rank;   // 등수
-	private String sNo;    // 학번
-	private String sName;  // 학생이름
-	private String mName;  // 학과이름
-	private int score;     // 점수
+
+	private int rank;
+	private int mno;
+	private String mname;
+	private int sno;
+	private String sname;
+	private int score;
+	private int expel;
 	public StudentDto() {}
-	// 입력용
-	public StudentDto(String sName, String mName, int score) {
-		this.sName = sName;
-		this.mName = mName;
+	public StudentDto(String sname, String mname,  int score) {
+		this.mname = mname;
+		this.sname = sname;
 		this.score = score;
 	}
-	// 수정용
-	public StudentDto(String sNo, String sName, String mName, int score) {
-		this.sNo = sNo;
-		this.sName = sName;
-		this.mName = mName;
+	
+	public StudentDto(String sname, String mname, int score,int sno ) {
+		this.mname = mname;
+		this.sno = sno;
+		this.sname = sname;
 		this.score = score;
 	}
-	// 출력용
-	public StudentDto(int rank, String sNo, String sName, String mName, int score) {
+	public StudentDto(int rank, int mno, String mname, int sno, String sname, int score) {
 		this.rank = rank;
-		this.sNo = sNo;
-		this.sName = sName;
-		this.mName = mName;
+		this.mno = mno;
+		this.mname = mname;
+		this.sno = sno;
+		this.sname = sname;
 		this.score = score;
 	}
 	@Override
 	public String toString() {
 		if(rank!=0) {
-			return rank+"등\t"+sName+"\t"+mName+"\t"+score;
+			return rank+"등\t"+sname+"\t"+mname+"\t"+score;
 		}else {
-			return sNo+"\t"+sName+"\t"+mName+"\t"+score;
+			return sno+"\t"+sname+"\t"+mname+"\t"+score;
 		}
 	}
 	public int getRank() {
 		return rank;
 	}
-	public String getsNo() {
-		return sNo;
+	public void setRank(int rank) {
+		this.rank = rank;
 	}
-	public String getsName() {
-		return sName;
+	public int getMno() {
+		return mno;
 	}
-	public String getmName() {
-		return mName;
+	public void setMno(int mno) {
+		this.mno = mno;
+	}
+	public String getMname() {
+		return mname;
+	}
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
+	public int getSno() {
+		return sno;
+	}
+	public void setSno(int sno) {
+		this.sno = sno;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
 	}
 	public int getScore() {
 		return score;
 	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+	public int getExpel() {
+		return expel;
+	}
+	public void setExpel(int expel) {
+		this.expel = expel;
+	}
+	
+	
+	
 }

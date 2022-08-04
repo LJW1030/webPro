@@ -1,9 +1,11 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1649720987000
-configurationInstallLocation=/F\:/eclipse-jee-2020-06-R-win32-x86_64/eclipse/
+configurationInstallLocation=/D\:/webPro/IDE/eclipse_java/
+ct.upsell.display.after=1649668855802
 eclipse.preferences.version=1
 iconcolormode=primary
-last.download.attempt.time=1651651329632
-lastConfiguration=1649596943679
-newinstall=true
+last.download.attempt.time=1658976112453
+lastConfiguration=1658976093623
+newinstall=false
+showWelcomeDialog=false
 workbench.theme=Dark Gray
