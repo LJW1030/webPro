@@ -1,0 +1,47 @@
+1.	JDK 라이브러리(자바 표준 라이브러리)에 대하여
+지금까지 무심코 사용해 왔던 String클래스와 System클래스도 모두 이 이 라이브러리에 속한 클래스이다.
+이 라이브러리는 JDK안에 포함되어 있는데 자바 가상기계가 자바 프로그램을 실행할 때 
+이 라이브러리의 클래스와 인터페이스들을 자동으로 읽어 들이기 때문에 
+지금까지 그 존재를 인식하지 않고도 사용할 수 있었던 것이다.
+
+(C:\Program Files\Java\jdk1.8.0_271\jre\lib\rt.jar 혹은 C:\Program Files\Java\jre1.8.0_271\lib\rt.jar). JRE System Library밑의 rt.jar밑의 java.lang밑의 System.class와 String.class를 확인.
+
+ 2. 	문자열에 관련된 대표적 클래스 : String
+String의 주요 기능들(메소드)
+	String concat(String str) : 저장된 문자열과 str문자열을 결합
+	String substring(int begin) : 시작위치부터 마지막까지의 문자열을 반환
+	int length() : 문자열 길이를 반환
+	String toUpperCase() : 대문자로 반환
+	String toLowerCase() : 소문자로 반환
+	char charAt(int index) : index 위치의 문자를 반환
+	int indexOf(char ch) : 첫번째 ch문자의 위치를 반환
+	int lastIndexOf(char ch) : 마지막 ch문자의 위치를 반환
+	boolean equals(String str) : 지정된문자열과 str문자열이 같은지 비교
+	boolean equalslgnoreCase(String str) : 대소문자구분없이 지정된문자열과 str문자열이 같은지 비교
+	String trim() : 문자열 앞뒤 공백제거
+	String replace(char old, char new) : 문자열 내의 old문자를 new문자로 반환
+	String  repalceAll(String old, String new) : 문자열 내의 old문자열을 new로 반환
+
+StringBuilder 주요 기능(메소드)
+append(String str) : 문자열 str 추가
+insert(int index, String str) : 특정 index에 문자열 str 추가
+delete(int start, int end) : index위치 start부터 end앞 까지 삭제
+deleteCharAt(int index) : index위치의 특정 문자 하나 삭제
+int capacity() : 문자열 크기 반환
+ensureCapacity(int size) : 버퍼의 크기를 size만큼 늘리는 메소드
+trimToSize() : 과도한 버퍼 크기를 적당하게 줄이는 메소드
+
+개발 테스트에 많이 쓰이는 System.currentTimeMillis()
+
+StringTokenizer 주요 기능(메소드) : 문자열 분할
+
+날짜(Calendar와 GregorianCalendar) API
+※날짜와 시간을 표현할 때 많이 쓰이는 Calendar클래스는 싱글톤클래스
+※날짜와 시간을 표현할 때 많이 쓰이는 GregorianCalendar클래스는 일반클래스
+
+수학적 계산에 사용되는 클래스 Math
+Math.random()
+Random() 메소드는 double타입의 임의의 수를 발생
+
+Scanner 및 Sysout
+※Scanner : 키보드에서 타이핑하는 문자열 또는 입출력 프로그래밍에서 값을 읽어올 때, 무엇인가를 얻어 올 때 사용
