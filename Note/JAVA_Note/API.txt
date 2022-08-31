@@ -1,4 +1,4 @@
-1.	JDK 라이브러리(자바 표준 라이브러리)에 대하여
+1. JDK 라이브러리(자바 표준 라이브러리)에 대하여
 지금까지 무심코 사용해 왔던 String클래스와 System클래스도 모두 이 이 라이브러리에 속한 클래스이다.
 이 라이브러리는 JDK안에 포함되어 있는데 자바 가상기계가 자바 프로그램을 실행할 때 
 이 라이브러리의 클래스와 인터페이스들을 자동으로 읽어 들이기 때문에 
@@ -6,7 +6,7 @@
 
 (C:\Program Files\Java\jdk1.8.0_271\jre\lib\rt.jar 혹은 C:\Program Files\Java\jre1.8.0_271\lib\rt.jar). JRE System Library밑의 rt.jar밑의 java.lang밑의 System.class와 String.class를 확인.
 
- 2. 	문자열에 관련된 대표적 클래스 : String
+ 2. 문자열에 관련된 대표적 클래스 : String
 String의 주요 기능들(메소드)
 	String concat(String str) : 저장된 문자열과 str문자열을 결합
 	String substring(int begin) : 시작위치부터 마지막까지의 문자열을 반환
