@@ -42,7 +42,7 @@
   	</form>
   </div>
   <table>
-  	<tr><th>사원번호</th><th>이름</th><th>직책</th><th>mgr</th><th>입사일</th>
+  	<tr><th>사원번호</th><th>이름</th><th>직책</th><th>상사번호</th><th>입사일</th>
   			<th>급여</th><th>상여</th><th>부서번호</th></tr>
   	<c:forEach var="e" items="${empList}">
 			<tr><td>${e.empno }</td>
