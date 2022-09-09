@@ -31,7 +31,7 @@
   		사원명 <input type="text" name="ename" value="${searchEmp.ename }" size="5">
   		직책 <input type="text" name="job" value="${searchEmp.job }" size="5">
   		부서번호 <select name="deptno">
-  			<option value="0">모든 부서</option>
+  			<option value="0">부서</option>
   			<c:forEach items="${deptList }" var="dept">
   				<option value="${dept.deptno }"  
   					<c:if test="${dept.deptno==searchEmp.deptno }">selected="selected"</c:if>

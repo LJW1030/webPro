@@ -20,7 +20,7 @@ public class EmpController {
 //	@RequestMapping(value="/", method = RequestMethod.GET)
 	@GetMapping("/")
 	public String index() {
-		log.info("welcome ! ");
+		log.info("welcome!");
 		return "redirect:emp.do";
 	}
 	@GetMapping("emp.do")
