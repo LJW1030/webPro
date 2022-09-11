@@ -49,7 +49,7 @@
 				<td>${e.ename }</td>
 				<td>${e.job }</td>
 				<td>${e.mgr }</td>
-				<td><fmt:formatDate value="${e.hiredate }" pattern="yy년MM월dd일 E요일"/> </td>
+				<td><fmt:formatDate value="${e.hiredate }" pattern="yy년 MM월 dd일 E요일"/> </td>
 				<td align="right"><fmt:formatNumber value="${e.sal }" pattern="#,###"/></td>
 				<td align="right"><fmt:formatNumber value="${e.comm }" pattern="#,####"/></td>
 				<td>${e.deptno }</td>
