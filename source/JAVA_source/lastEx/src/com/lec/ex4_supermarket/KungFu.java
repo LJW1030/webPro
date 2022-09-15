@@ -2,12 +2,10 @@ package com.lec.ex4_supermarket;
 
 public class KungFu {
 	public static void main(String[] args) {
-		Integer x = 400;
-		Integer y = x;
-		x++;
-		StringBuilder sb1 = new StringBuilder("123");
-		StringBuilder sb2 = sb1;
-		sb1.append("5");
-		System.out.println(x+" "+y+" "+sb1+" "+sb2);
+		int a = 1;
+		int b = 2;
+		int c = --a;
+		int d = b/c;
+		System.out.println(d);
 	}
 }
