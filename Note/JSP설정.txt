@@ -1,0 +1,48 @@
+개발 환경 설정
+
+­--	JDK 설치
+JSP및 Servlet은 JAVA를 기본언어로 사용됩니다. JAVA언어로 작성한 프로그램을 컴파일하기 위해서는 JDK(Java Development Kit)가 필요 합니다 
+­--	path 설정
+환경변수 PATH에 javac.exe가 있는 폴더를 포함시켜 어느 디렉토리에서나 bin/javac.exe가 실행될 수 있도록 설정합니다.
+­
+--	이클립스 다운로드
+www.eclipse.org에 접속하여 Eclipse IDE for EE Developers
+	Java Resource-src 폴더: 서블릿과 자바 소스 파일이 위치해야 하는 디렉토리
+	WebContent 폴더: 서블릿과 자바 소스 파일을 제외한 모든 파일이 위치해야 하는 디렉토리
+	WebContent-META-INF 폴더: 리소스 설정에 관련된 파일(context.xml)이 위치
+	WebContent-WEB-INF 폴더: 웹 애플리케이션 설정에 관련된 파일(web.xml)이 위치
+	WebContent-WEB-INF-classes: 컴파일 된 서블릿 클래스나 자바 클래스들이 위치
+	WebContent-WEB-INF-lib: 참조해야 하는 라이브러리(jar) 파일들이 위치
+
+--­	톰캣설치
+http://tomcat.apache.org에 접속하여 Tomcat 9.0.x zip 파일 다운받아 압축을 푼다
+bin : 톰캣을 실행하고 종료시키는 스크립트 파일
+conf : server.xml을 포함한 설정 파일
+lib ; 톰캣을 실행하는데 필요한 라이브러리(.jar) 파일위치
+logs : 톰캣이 실행되는 동안 임시 파일이 위치함
+temp : 톰캣이 실행되는 동안 임시파일이 위치
+webapps ; 웹 어플리케이션이 위치
+work : 톰캣이 실행되는 동안 사용되는 작업 파일이 위
+­
+--	톰캣 환경 설정
+이클립스 연동 : No server are available. Click this link to….. 이용하여 server 생성
+	Tomcat v9.0 Server at localhost [Stopped, Republish] 생성
+	Tomcat v9.0 Server at localhost [Stopped, Republish] 더블클릭
+	Server Locations  - use Tomcat (takes control to Tomcat installation)
+	Server Options – Publish module contexts to separate XML files도 체크
+	Server Options – Modules auto reload by default도 체크
+	Ports
+	http/1.1 Port number 8090
+ 
+­--	톰캣 서버 start
+­	서버 구동 확인  http://localhost:8090 or http://127.0.0.1:8090 
+­	서버 stop
+­	이클립스 한글 코드 설정 (window – Preferences 메뉴에서)
+	General –Workspace 선택 후 utf-8로
+	Web – CSS files 선택 후 Encoding에 utf-8
+	Web - HTML 선택 후 Encoding에 utf-8
+	Web – JSP 선택 후 Encoding에 utf-8
+­	플러그인
+	exERD
+	JavaScript 자동완성 plug in install (https://tyrionlife.tistory.com/155 참조)
+

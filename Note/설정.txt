@@ -1,0 +1,39 @@
+C:\Program Files\Java\jdk1.8.0_321
+
+JAVA_HOME 환경변수생성
+JAVA_HOME="C:\Program Files\Java\jdk1.8.0_321"
+
+Path추가할 내용
+;%JAVA_HOME%\bin
+
+--	Java 개발 환경 설정
+①	JDK(Java Development Kit) 자바 개발 키트
+②	IDE(Integrated Development Environment); 통합 개발 툴(편집기) ex. 메모장, eclipse
+--	JDK 설치
+①	java.sun.com 또는 www.oracle.com 접속
+(https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+②	Downloads 에서 JDK 최신버전 다운로드 : 운영체제에 맞는 jdk (Java SE 8u321)
+--	프로그램 설치에서 32/64는 무엇을 의미하고 jdk와 elipse 버전에 어떤 영향을 미치는가?
+현재 설치되는 시스템의 운영체제 종류가 64비트 운영체제인지 32비트 운영체제인지에 따라 설치되는 파일이 다르다. 이는 jdk도 Eclipse도 마찬가지다. 바이너리 코드로 컴파일된 클래스 파일을 시스템에 맞는 JVM이 실행하게 될 때 플랫폼 독립적이라 할 수 있다. 내 시스템의 종류에 맞지 않는 jdk나 eclipse를 설치하면 JVM이 제대로 구동되지 못할 것이다.
+
+--	Java 환경 변수 설정
+①	bin/javac.exe(컴파일러) : *.java 파일을 JVM이 받아들일 수 있는 .class 파일로 변환시켜주는 프로그램. 매번 해당 경로에 들어가서 실행하기가 번거로우므로, 환경 변수 설정을 통해 어디서나 실행하도록 한다.
+bin/java.exe(JVM) : *.class 파일을 실행하도록 한다
+--	위의 bin폴더에 있는 파일을 어디서나 샐행하기 위해 아래의 환경변수 설정을 한다
+②	내PC 오른쪽 마우스 ? 속성 - 고급시스템설정 - 환경변수
+③	시스템변수 새로만들기-변수이름:JAVA_HOME  / 변수값 : JDK설치된 폴더
+④	Path에  ; %JAVA_HOME%\bin; 추가
+
+4.	
+이클립스 다운로드(https://www.eclipse.org/downloads/packages/release/2020-06/r )에서 2020-06 R Package을 다운로드후 입축을 풀고 eclipse.exe가 실행 
+(참조: java 1.8 eclipse version 검색 or https://yyman.tistory.com/1451?category=316363)
+cf) 구글에서 java 8 eclipse version 검색 후 Java 8 실행 가능한 버전을 확인한다
+
+--JDBC
+1.	JDBC(Java Database Connectivity) 프로그래밍 개념
+(1)	JDBC(Java Database Connectivity) : 자바 패키지의 일부로 자바 프로그램이 데이터 베이스와 연결되어 데이터를 주고 받을 수 있게 해 주는 프로그래밍 인터페이스이다. 자바 데이터베이스 프로그래밍 API라고 할 수 있다.  
+(2)	JDBC 드라이버 : 오라클 드라이버또는 MySQL 드라이버를 자바가 설치되어 있는 C:\Program Files\Java\jre1.8.0_XXX\lib\ext 폴더(%JAVA_HOME%/JRE/LIB/EXT 폴더)에 다음의 두 파일을 복사한다.
+ojdbc6.JAR (C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib)
+mysql-connector-java-8.0.28.jar (C:\Program Files (x86)\MySQL\Connector J 8.0)
+?	MySQL버전에 따라 드라이버 파일은 다름 ex)mysql-connector-java-8.0.x.jar
+(3)	이클립스에서 Windows 메뉴 ? preferences ? Java ? Installed JREs ? edit ? Add External JARs을 통해 두개의 jar를 등록 후 finish

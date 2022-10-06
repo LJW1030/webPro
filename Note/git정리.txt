@@ -1,0 +1,41 @@
+깃허브의 레파지터리 생성
+1. http://www.github.com에 가입하기(sign up) 후 확인 지침이 포함된 메일 확인
+2. Sign in
+3. Create repository(올릴 공간명)
+4. 소스를 내컴퓨터에서 github 인터넷으로 올리고 git 명령어를 사용하기 위해
+git-scm을 다운받고 install (https://git-scm.com/downloads )
+5. Git Bash에서 환경설정
+> git config --global user.name “wkdrngla789”
+> git config --global user.email “wkdrngla789@naver.com”
+> git config --list (확인)
+깃허브의 레파지터리 생성
+6. 내 pc의 repository 폴더에 다음의 파일 추가
+① README.md (git 소개)
+② .gitignore (git 공간에 올리지 않을 파일 리스트)
+7. git 공간에 자료 올리기
+> git init (초기화)
+> git add . (공유 추가할 파일 더하기)
+> git status (상태 확인 – 선택)
+> git commit –m “first commit” (히스토리 버전 이름)
+> git branch –M main (branch 생성 – branch 생성을 하지 않을 경우 master로)
+> git remote add origin 본인깃주소 (연결고리)
+> git remote –v (확인 – 선택)
+> git push –u origin main (branch에 올리기 branch를 생성하지 않았다면
+master)
+깃허브의 레파지터리 생성
+8. 내 pc와 git이 동기화된 거 확인 후, 추가 파일 만든 후 추가 올리기
+> git add .
+> git commit –m “second”
+> git push –u origin main 
+9. 추가한 파일 수정
+> git add .
+> git commit –m “third”
+> git push –u origin main
+깃허브의 레파지터리 생성
+10. 협업 (웹에서 수정)
+> git clone 주소 폴더이름 (다른 pc에 git 내용 받기)
+ git pull origin main (동기화)
+수정 후
+> git add .
+> git commit –m “last”
+> git push origin main
